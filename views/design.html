@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Young WebMaster Camp</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+  <link href="css/style.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+
+          </div>
+
+          <div class="navbar-collapse collapse">
+            <div class="menu">
+              <ul class="nav nav-tabs" role="tablist">
+                  <% if (!member) { %>
+                <li role="presentation"><a href="/" class="active">Home</a></li>
+
+                <li role="presentation"><a href="#" data-toggle="modal" data-target="#myModal">sign in</a></li>
+                <li role="presentation"><a href="#" data-toggle="modal" data-target="#myModal2">sign up</a></li>
+                <% } else{ %>
+                  <li role="presentation"><a href="/" class="active">Home</a></li>
+                  <li role="presentation"><a href="/apply">apply</a></li>
+                  <li role="presentation"><a href="/signout">Sign Out</a></li>
+                  <% } %>
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+<!-- sign in -->
+  <div class="container">
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title black">Log in</h4>
+
+          </div>
+          <div class="modal-body">
+            <form method="post" action="/login" >
+              <div class="form-group">
+
+                <input type="text" class="form-control" id="email" placeholder="email" required autocomplete="off">
+
+              </div>
+              <div class="form-group">
+
+                <input type="password" class="form-control" id="password" placeholder="password" required autocomplete="off">
+              </div>
+
+
+          </div>
+          <div class="modal-footer">
+             <div style="float: right; width: 130px padding-right:0; ">
+            <button   type="submit"  formaction="/" class="btn btn-default">cancel</button>
+
+          </div>
+           <div style="float: right; width: 130px ">
+
+            <!--<button onclick="signin()" class="btn btn-default" id="signin">sign in</button> -->
+            <button type="submit" formaction="/signin" class="btn btn-default"  >sign in</button>
+          </div>
+
+
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- sign in -->
+    <div class="container">
+      <!-- Modal -->
+      <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title black">Log in</h4>
+
+            </div>
+            <div class="modal-body">
+              <form method="post" action="/login" >
+                <div class="form-group">
+
+                  <input type="text" class="form-control" id="email" placeholder="email" required autocomplete="off">
+
+                </div>
+                <div class="form-group">
+
+                  <input type="password" class="form-control" id="password" placeholder="password" required autocomplete="off">
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+               <div style="float: right; width: 130px padding-right:0; ">
+              <button   type="submit"  formaction="/" class="btn btn-default">cancel</button>
+
+            </div>
+             <div style="float: right; width: 130px ">
+
+              <!--<button onclick="signin()" class="btn btn-default" id="signin">sign in</button> -->
+              <button type="submit" formaction="/signup" class="btn btn-default"  >sign up</button>
+            </div>
+
+
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="jumbotron ">
+    <img src="img/img1.png" class="img-responsive center" />
+    <h2> ประกาศผลผู้เข้ารอบ</h2>
+  </div>
+
+  <div class="our-services">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.4s">
+            <div class="services">
+              <div class="icons">
+                <a href="/"><img src="img/c1.png" class="img-responsive" /></a>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-3">
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.8s">
+            <div class="services">
+              <div class="icons">
+                <a href="/design"><img src="img/d1.png" class="img-responsive" /></a>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-3">
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.4s">
+            <div class="services">
+              <div class="icons">
+                <a href="/marketing"><img src="img/marketing.png" class="img-responsive" /></a>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-3">
+          <div class="wow bounceIn" data-wow-offset="0" data-wow-delay="0.8s">
+            <div class="services">
+              <div class="icons">
+                <a href="/programming"><img src="img/programming.png" class="img-responsive" /></a>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="jumbotron">
+    <div class="center" width="300" style=" padding-bottom:30px;" >
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." ><
+    </div>
+    <h2>รายชื่อผู้ผ่านเข้ารอบ Web Designer</h2><br />
+    <ul id="names"></ul>
+  </div>
+
+
+
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/fancybox/jquery.fancybox.pack.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <script src="js/functions.js"></script>
+  <script>
+
+
+
+    function createNode(element) {
+      return document.createElement(element);
+  }
+
+  function append(parent, el) {
+    return parent.appendChild(el);
+  }
+
+  var ul = document.getElementById('names');
+  var url = 'https://ywc15.ywc.in.th/api/interview';
+
+
+
+  fetch(url)
+  .then((resp) => resp.json())
+  .then(function(data) {
+    let names = data
+    return names.map(function(name) {
+
+      major=name.major
+      if(major=='design'){
+
+
+      let li = createNode('li'),
+
+          span = createNode('span');
+
+      span.innerHTML = `${name.firstName} ${name.lastName}`;
+
+
+      append(li, span);
+      append(ul, li);
+
+    }})
+  })
+  .catch(function(error) {
+    console.log(error);
+  });
+
+
+  function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("names");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+
+      if (li[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+      } else {
+          li[i].style.display = "none";
+
+
+      }
+  }
+}
+
+
+
+
+
+
+
+
+
+    wow = new WOW({
+
+      })
+      .init();
+  </script>
+</body>
+
+</html>
